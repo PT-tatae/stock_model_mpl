@@ -37,7 +37,7 @@ model = tf.keras.Sequential([
 model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mae'])
 
 # ฝึกสอนโมเดล
-history = model.fit(X_train_scaled, y_train, epochs=1000, verbose=0, validation_data=(X_test_scaled, y_test))
+history = model.fit(X_train_scaled, y_train, epochs=400, verbose=0, validation_data=(X_test_scaled, y_test))
 
 # ประเมินผลโมเดล
 loss, mae = model.evaluate(X_test_scaled, y_test)

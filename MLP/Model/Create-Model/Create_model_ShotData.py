@@ -27,9 +27,9 @@ X_test_scaled = scaler.transform(X_test)
 
 # สร้างโมเดลที่มี Hidden Layer
 model = tf.keras.Sequential([
-    tf.keras.layers.Dense(64, input_shape=(X_train_scaled.shape[1],), activation='tanh'),  # Hidden Layer แรก
-    tf.keras.layers.Dense(32, activation='tanh'),                                            # Hidden Layer ที่สอง
-    tf.keras.layers.Dense(16, activation='tanh'),                                            # Hidden Layer ที่สาม
+    tf.keras.layers.Dense(64, input_shape=(X_train_scaled.shape[1],), activation='relu'),  # Hidden Layer แรก
+    tf.keras.layers.Dense(32, activation='relu'),                                            # Hidden Layer ที่สอง
+    tf.keras.layers.Dense(16, activation='relu'),                                            # Hidden Layer ที่สาม
     tf.keras.layers.Dense(1)                                                                 # Output Layer 
 ])
 
